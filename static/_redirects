@@ -1,0 +1,9 @@
+# Här skrivs alla redirects för netlify in, används inte netlify kan denna filen tas bort.
+# https://www.netlify.com/docs/redirects/
+
+# Redirects from what the browser requests to what we serve
+
+/admin https://changeme.se/wp-admin
+/wp-admin https://changeme.se/wp-admin
+
+# 301 Redirects

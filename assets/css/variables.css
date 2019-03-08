@@ -1,0 +1,37 @@
+:root {
+    /*
+    // Colors
+    */
+    --primaryTextColor: #4d4c4c;
+    --primaryColor: #4098d7;
+    --secondaryColor: #73ac2c;
+    --successColor: #4caf50;
+    --infoColor: #2196f3;
+    --warningColor: #ffc107;
+    --errorColor: #ff5252;
+    /*
+    // Fonts
+    */
+    --primaryFont: "Open Sans", sans-serif;
+    --headingFont: "Open Sans", sans-serif;
+    /*
+    // Transitions
+    */
+    --cubicBezier: cubic-bezier(0.4, 0, 0.2, 1);
+    --fastTrans: 0.15s var(--cubicBezier);
+    --normalTrans: 0.25s var(--cubicBezier);
+    --slowTrans: 0.3s var(--cubicBezier);
+}
+
+/*
+// Media queries
+*/
+
+@custom-media --smallDesktop (max-width: 1700px);
+@custom-media --laptop (max-width: 1450px);
+@custom-media --largeTablet (max-width: 1240px);
+@custom-media --tablet (max-width: 1030px);
+@custom-media --mediumTablet (max-width: 880px);
+@custom-media --smallTablet (max-width: 760px);
+@custom-media --mobile (max-width: 600px);
+@custom-media --smallMobile (max-width: 359px);
