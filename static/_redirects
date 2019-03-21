@@ -3,7 +3,4 @@
 
 # Redirects from what the browser requests to what we serve
 
-/admin https://changeme.se/wp-admin
-/wp-admin https://changeme.se/wp-admin
-
-# 301 Redirects
+/*    /index.html   200
