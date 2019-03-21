@@ -1,24 +1,6 @@
-import { apiUrl } from './utils/config';
-
 const PurgecssPlugin = require('purgecss-webpack-plugin');
 const glob = require('glob-all');
 const path = require('path');
-const axios = require('axios');
-
-function generateRoute(route) {
-    return axios
-        .get(route, {
-            timeout: 10000,
-        })
-        .then(res => res.data.map(item => item.id));
-}
-
-async function getRoutes() {
-    const shows = generateRoute(`${apiUrl}/shows`);
-
-    const values = await Promise.all([shows]);
-    return values.join().split(',');
-}
 
 class TailwindExtractor {
     static extract(content) {
@@ -27,7 +9,7 @@ class TailwindExtractor {
 }
 
 module.exports = {
-    mode: 'universal',
+    mode: 'spa',
 
     /*
      ** Headers of the page
@@ -90,15 +72,7 @@ module.exports = {
                 id: 'GTM-xxx',
             },
         ],
-        '@/modules/generate',
     ],
-
-    generate: {
-        fallback: true,
-        routes() {
-            return getRoutes();
-        },
-    },
 
     env: {
         APP_ENV: process.env.APP_ENV || 'dev',
