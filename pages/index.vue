@@ -39,7 +39,7 @@ export default {
         shows: [],
     }),
     async created() {
-        const res = await axios('http://tv-show-api.test/api/shows/ids?ids=1,2,3,4,5,6,7,8,9,10');
+        const res = await axios('https://tvshows.kimlarsson.se/api/shows/ids?ids=1,2,3,4,5,6,7,8,9,10');
         this.shows = res.data;
     },
 };

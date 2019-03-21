@@ -25,7 +25,7 @@ export default {
         show: null,
     }),
     async created() {
-        const res = await axios(`http://tv-show-api.test/api/shows/ids?ids=${this.$route.params.id}`);
+        const res = await axios(`https://tvshows.kimlarsson.se/api/shows/ids?ids=${this.$route.params.id}`);
         [this.show] = res.data;
     },
 };
